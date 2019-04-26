@@ -727,6 +727,10 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
   display: inline-block;
   vertical-align: middle;
 }
+.fixed-info{
+  margin-top:50px;
+  margin-bottom:25px;
+}
 
 /* ----- card deck -----*/
 /* .s003 form .btn-group {
@@ -760,18 +764,11 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
   color: white;
   
 }
-.card-button:hover {
+/* .card-button:hover {
   cursor: pointer;
-  /* opacity: 0.8; */
   box-shadow: 0px 4px 12px rgba(98, 98, 99, 0.3);
-}
+} */
 
-.profile-title {
-  background-color: orange;
-  color:white;
-  font-weight: 200;
-  font-size: 1.5em;
-}
 .img-center {
  
   display: block;
@@ -819,4 +816,32 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
 }
 .flex-item h6{
   margin-top: 12px;
+}
+
+/* ----- searched result ----- */
+.profile-title {
+  background-color: orange;
+  color:white;
+  font-weight: 200;
+  font-size: 1.5em;
+}
+
+#toTop {
+  text-align: center;
+  bottom: 35px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  right: 12px;
+  z-index: 9999;
+}
+#toTop i {
+  background-color: #464646;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  line-height: 40px;
+}
+.fa-chevron-up:before {
+  content: "\f077";
 }
