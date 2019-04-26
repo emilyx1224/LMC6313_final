@@ -5,17 +5,54 @@
 //hide result if not search
   function initialSetup(){
       $('#para3').hide();
-      $('#fixed-info1').hide();
-     
+      $('#tv').hide();
+      $('#movie').hide();
+      $('#game').hide();
   }
 //show TV
-$('#pokemonTV').on('click', function(event) {
-  alert('You clicked the Bootstrap Card');
+$('#btnTV').on('click', function(event) {
+  $('#tv').show();
+  $('#movie').hide();
+  $('#game').hide();
+  scrollingElement = (document.scrollingElement || document.body)
+  function scrollSmoothToBottom () {
+    $(scrollingElement).animate({
+     scrollTop: document.body.scrollHeight
+        }, 600);
+     }
 });
-//show info
-  function showInfo(){
-      $('#fixed-info1').show();
-  }
+//show Movie
+$('#btnMovie').on('click', function(event) {
+  $('#movie').show();
+  $('#tv').hide();
+  $('#game').hide();
+});
+//show Game
+$('#btnGame').on('click', function(event) {
+  $('#game').show();
+  $('#tv').hide();
+  $('#movie').hide();
+});
+/*--------------------------
+    scrollUp
+    ---------------------------- */	
+  $(window).on('scroll',function () {
+      if($(window).scrollTop()>200) {
+          $("#toTop").fadeIn();
+      } else {
+          $("#toTop").fadeOut();
+      }
+  });
+  // $("#toTop").click(function() {
+  //   $("html, body").animate({ scrollTop: 0 }, "slow");
+  //   return false;
+  // });
+  // $('#toTop').on('click', function() {
+  //     $("html,body").animate({
+  //         scrollTop:0
+  //     }, 500);
+  // }); 
+
 //get seartch input
   function getpokename(){
    // $('#ready').addClass("disabled");
