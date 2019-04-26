@@ -4,13 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--search area based on template from colorlib.com-->
-    <meta name="Yangxin&Zhong" content="colorlib.com">
+    
+    <meta name="Yangxin&Zhong" content="LMC6313-Final">
     <link rel="shortcut icon" href="pikachu.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -29,10 +29,11 @@
       </nav>
     </header>
     <!-- Search area  -->
+    <!--search area based on template from colorlib.com-->
     <div class="s003 parallax">
       <form onSubmit="return false;">
         <legend>pokéwiki</legend>
-        <p>Explore Pokémon by name</p>
+        <p>Explore Pokémon by Name</p>
         <!-- Input search -->
         <div class="inner-form">
             <div class="input-field second-wrap">
@@ -59,95 +60,77 @@
           </div>
           <div class = "row">
             <div class="col">
-                <p class = "more-about">Pokémon in different media</p>
+                <p class = "more-about">Pokémon in Different Media</p>
             </div>
-              
           </div>
         </div>
         <div class="flex-container">
-            <div class="flex-item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="flex-item col-lg-3 col-md-3 col-sm-3 col-xs-12" id="btnTV">
                 <div><img src="images/TV.png" class="img-center" alt="..." ></div>
                 <h6>TV show</h6>
             </div>
-            <div class="flex-item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="flex-item col-lg-3 col-md-3 col-sm-3 col-xs-12" id="btnMovie">
                 <div><img src="images/Movie.png" class="img-center" alt="..." ></div>
                 <h6>Movies</h6>
             </div>
-            <div class="flex-item col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="flex-item col-lg-3 col-md-3 col-sm-3 col-xs-12" id="btnGame">
                 <div><img src="images/Game.png" class="img-center" alt="..." ></div>
                 <h6>Games</h6>
             </div>
         </div>
       </form>
     </div>
-    <!-- fixed information 1-->
-    <div class="container fixed-info ">
+    <!-- fixed information -->
+     <div class="container fixed-info" id="tv">
         <div class="row mx-5">
-            <!-- <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <img src="images/pokemon_intro.jpg" alt="" width="100%">
-            </div> -->
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div id="pokemonCarousel" class="carousel slide wrap" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <!-- Slides -->
-                    <div class="carousel-inner" role="listbox">
-                      <div class="carousel-item active">
-                        <img src="images/pokemon_game.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                          <img src="images/bg_2.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                          <img src="images/bg_3.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <a class="carousel-control-prev" href="#pokemonCarousel" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#pokemonCarousel" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <h1> Pokemon</h1>
-              <hr class="my-3">
-              <p>Pokémon is a media franchise managed by The Pokémon Company, a Japanese consortium between Nintendo, Game Freak, and Creatures. The franchise was created by Satoshi Tajiri in 1995, and is centered on fictional creatures called "Pokémon", which humans, known as Pokémon Trainers, catch and train to battle each other for sport. The English slogan for the franchise is "Gotta Catch 'Em All". Works within the franchise are set in the Pokémon universe.</p></div>
-              
-          </div>
-     </div>
-     <div class="container fixed-info ">
-        <div class="row mx-5">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <iframe  width="700" height=auto src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
+                  </iframe>
+              </div> -->
               <video class="wrap" width="100%" height=auto controls>
                   <source src="videos/pokemon_tv.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <h1> Pokemon TV</h1>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <h1> Pokémon TV Show</h1>
               <hr class="my-3">
               <p>Pokémon, also known as Pokémon the Series, is an anime television series based on the Pokémon video game series. It was originally broadcast on TV Tokyo in 1997. As of 2018 it has produced and aired over 1,000 episodes, divided into 6 series in Japan and 22 seasons internationally. The anime follows the quest of the main character, Ash Ketchum (known as Satoshi in Japan), a Pokémon Master in training, as he and a small group of friends travel around the world of Pokémon along with their Pokémon partners.</p>
           </div>
         </div>
      </div>
-     <div class="container fixed-info ">
+     <div class="container fixed-info" id="movie">
         <div class="row mx-5">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
+                </iframe>
+            </div> -->
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <video class="wrap" width="100%" height=auto controls>
                     <source src="videos/pikachu_trailer.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <h1> Pokemon Movies</h1>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <h1> Pokémon Movies</h1>
+              <hr class="my-3">
+              <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
+            </div>
+          </div>
+     </div>
+     
+     <div class="container fixed-info" id="game">
+        <div class="row mx-5">
+            <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
+                </iframe>
+            </div> -->
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div  class="wrap"><img src="images/pokemon_game_nintendo2.jpg" width=100% alt="" ></div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <h1> Pokémon Games</h1>
               <hr class="my-3">
               <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
             </div>
@@ -227,6 +210,11 @@
             </div> -->
             
         </div>
+    </div>
+    <!-- start scrollUp  -->
+    <div id="toTop" style="display:block;">
+        <i class="fas fa-chevron-up">
+        </i>
     </div>
     <script src="js/main.js"> </script>
   </body>
