@@ -1,57 +1,67 @@
  //initialize
+ 
  $(document).ready(function() {
     initialSetup();
   });
 //hide result if not search
   function initialSetup(){
       $('#para3').hide();
-      $('#tv').hide();
-      $('#movie').hide();
-      $('#game').hide();
+      // $('#tv').hide();
+      // $('#movie').hide();
+      // $('#game').hide();
+      
+  };
+
+//Scroll to top button
+$(window).on('scroll',function () {
+  if($(window).scrollTop()>100) {
+      $("#toTop").fadeIn();
+  } else {
+      $("#toTop").fadeOut();
   }
-//show TV
-$('#btnTV').on('click', function(event) {
-  $('#tv').show();
-  $('#movie').hide();
-  $('#game').hide();
-  scrollingElement = (document.scrollingElement || document.body)
-  function scrollSmoothToBottom () {
-    $(scrollingElement).animate({
-     scrollTop: document.body.scrollHeight
-        }, 600);
-     }
 });
-//show Movie
-$('#btnMovie').on('click', function(event) {
-  $('#movie').show();
-  $('#tv').hide();
-  $('#game').hide();
+$("#toTop").on('click',function(event) {
+    $("html, body").animate({ scrollTop: 0 }, 300);
+    return false;
 });
-//show Game
-$('#btnGame').on('click', function(event) {
-  $('#game').show();
-  $('#tv').hide();
-  $('#movie').hide();
+
+//Scroll to TV section
+$("#btnTV").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#tv").offset().top
+  }, 300);
 });
-/*--------------------------
-    scrollUp
-    ---------------------------- */	
-  $(window).on('scroll',function () {
-      if($(window).scrollTop()>200) {
-          $("#toTop").fadeIn();
-      } else {
-          $("#toTop").fadeOut();
-      }
-  });
-  // $("#toTop").click(function() {
-  //   $("html, body").animate({ scrollTop: 0 }, "slow");
-  //   return false;
-  // });
-  // $('#toTop').on('click', function() {
-  //     $("html,body").animate({
-  //         scrollTop:0
-  //     }, 500);
-  // }); 
+// $('#btnTV').on('click', function(event) {
+//   $('#tv').show();
+//   $('#movie').hide();
+//   $('#game').hide();
+  
+// });
+
+//Scroll to Movie section
+$("#btnMovie").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#movie").offset().top
+  }, 300);
+});
+// $('#btnMovie').on('click', function(event) {
+//   $('#movie').show();
+//   $('#tv').hide();
+//   $('#game').hide();
+// });
+
+//Scroll to Game section
+$("#btnGame").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#game").offset().top
+  }, 300);
+});
+// $('#btnGame').on('click', function(event) {
+//   $('#game').show();
+//   $('#tv').hide();
+//   $('#movie').hide();
+// });
+
 
 //get seartch input
   function getpokename(){
