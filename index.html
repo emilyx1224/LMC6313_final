@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title> Pokéwiki - LMC6313 Final Project</title>
@@ -80,7 +83,13 @@
         </div>
       </form>
     </div>
-    <!-- fixed information -->
+
+    <div class="container fixed-info-title">
+        
+          <h2 style="display:inline-block;font-size:2em;" class="font-weight-bold">more about pokémon</h2>
+  
+    </div> 
+    
      <div class="container fixed-info" id="tv">
         <div class="row mx-5">
           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -88,35 +97,40 @@
                   <iframe  width="700" height=auto src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
                   </iframe>
               </div> -->
-              <video class="wrap" width="100%" height=auto controls>
+              <video class="wrap" width="100%" height=auto poster="images/thumbnail_tv.jpg" controls>
                   <source src="videos/pokemon_tv.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <h1> Pokémon TV Show</h1>
+              <h1 style="color:#EFB200;font-weight:bold;"> TV Show</h1>
               <hr class="my-3">
-              <p>Pokémon, also known as Pokémon the Series, is an anime television series based on the Pokémon video game series. It was originally broadcast on TV Tokyo in 1997. As of 2018 it has produced and aired over 1,000 episodes, divided into 6 series in Japan and 22 seasons internationally. The anime follows the quest of the main character, Ash Ketchum (known as Satoshi in Japan), a Pokémon Master in training, as he and a small group of friends travel around the world of Pokémon along with their Pokémon partners.</p>
+              <p>Pokémon the Series is an ongoing Japanese anime television series, which premiered in Japan on April 1, 1997 on TV Tokyo. As of 2018 it has produced and aired over 1,000 episodes, divided into 6 series in Japan and 22 seasons internationally. The anime follows the quest of the main character, Ash Ketchum (known as Satoshi in Japan), a Pokémon Master in training, as he and a small group of friends travel around the world of Pokémon along with their Pokémon partners.</p>
+              <a  class="btn btn-warning text-white" href="https://www.pokemon.com/us/pokemon-episodes/01_01-pokemon-i-choose-you/?play=true" role="button" target="_blank">Watch Pokémon TV</a>
           </div>
         </div>
      </div>
      <div class="container fixed-info" id="movie">
         <div class="row mx-5">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h1 style="color:#4CD964;font-weight:bold;"> Pokémon Movies</h1>
+                <hr class="my-3">
+                <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
+                <a  class="btn btn-success text-white" href="https://www.detectivepikachumovie.com/" role="button" target="_blank">Most recent movie: Detective Pikachu</a>
+
+                
+              </div>
             <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
                 </iframe>
             </div> -->
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <video class="wrap" width="100%" height=auto controls>
+                <video class="wrap" width="100%" height=auto poster="images/thumbnail_movie.png" controls>
                     <source src="videos/pikachu_trailer.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <h1> Pokémon Movies</h1>
-              <hr class="my-3">
-              <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
-            </div>
+            
           </div>
      </div>
      
@@ -130,9 +144,10 @@
               <div  class="wrap"><img src="images/pokemon_game_nintendo2.jpg" width=100% alt="" ></div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <h1> Pokémon Games</h1>
+              <h1 style="color:#1BABED;font-weight:bold;"> Pokémon Video Games</h1>
               <hr class="my-3">
-              <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
+              <p>Pokémon has a series of video games published by Nintendo and The Pokémon Company as part of the Pokémon media franchise. First released in 1996 in Japan for the Game Boy, the main series of role-playing video games (RPGs) has continued on each generation of Nintendo's handhelds. Also, a big number of spin-off games based on the series have been developed by various companies, encompassing other genres such as action role-playing, puzzle, fighting, and digital pet games.</p>
+              <a  class="btn btn-primary text-white" href="https://www.pokemongo.com/en-us/" role="button" target="_blank">Play Pokémon Go on Your Phone</a>
             </div>
           </div>
      </div>
