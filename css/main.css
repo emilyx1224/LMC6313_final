@@ -632,15 +632,6 @@ legend {
     width: 100%;
   }
 }
-/* set style for result title*/
-
-.stats-title{
-  text-align: center;
-  margin-bottom: 0px;
-  margin:10px auto 20px auto;
-  color:#9EA7B4;
-  
-}
 /*for parallax scrolling effect in the search area*/
 .parallax { 
   background-image: url("../images/bg_5.png");
@@ -655,13 +646,29 @@ legend {
   background-size: cover;
 }
 
+/* set style for result title*/
+
+.stats-title{
+  text-align: center;
+  margin-bottom: 0px;
+  margin:30px auto 20px auto;
+  
+}
+/* Each stats name */
+.card-title {
+  text-align: center;
+  margin-top:10px;
+  margin-bottom: 0px;
+  font-size:1em;
+}
+
 /*set the styles for stats number*/
 .stats{
-
+  margin-top:0px;
   color:#9EA7B4;
-  font-size: 5em;
+  font-size: 2em;
   font-weight: 600;
-  text-align:left;
+  text-align:center;
 }
 /*set the styles for stats icons*/
 .img1{
@@ -672,40 +679,39 @@ legend {
   vertical-align: middle;
 }
 /*set the styles for stats card*/
-.margin
+.stats-card
 {
-margin-bottom: 10%;
-padding-top:10%;
+margin-bottom: 20px;
 padding-bottom:10%;
 padding-left:5%;
 padding-right:5%;
 border-style: none;
-box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
+/* box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5); */
 }
 /*Set the color for each stat*/
 .color1{
- color:#F9C59C;
+ color:#FF9831;
 }
 .color2{
-  color:#90D5F3;
+  color:#5AC8FA;
  }
  .color3{
-  color:#B9BCF9;
+  color:#7270F6;
  }
  .color4{
-  color:#9EDE8A;
+  color:#4CD964;
  }
  .color5{
   color:#EBDA40;
  }
  .color6{
-  color:#F3ABA9;
+  color:#FF6168;
  }
 
  /* ----- fixed information display ----- */
  .wrap {
-  /* background: rgba(255,255,255,0); */
-  background-color:#F2F2F2;
+  background: rgba(255,255,255,0);
+  /* background-color:#F2F2F2; */
   /* border: solid 1px red; */
   /* width: 384px; /* Play with this value */
   /* height: 216px;  Play with this value */ 
@@ -728,8 +734,9 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
   display: inline-block;
   vertical-align: middle;
 }
+
 .fixed-info{
-  margin-top:20px;
+  margin-top:50px;
   margin-bottom:100px;
 }
 .fixed-info h1{
@@ -844,6 +851,7 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
 #pokename {
   font-weight: 800;
   font-size:2.5em;
+  margin-bottom: 10px;
 }
 /* #poketype {
   border: 1px solid darkred;
@@ -851,13 +859,20 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
 
 } */
 .poketype {
-  border: 1px solid lightgray;
-  margin: 5px;
-  padding: 5px 15px;
+  /* border: 1px solid lightgray; */
+  color: white;
+  padding: 5px 25px;
+  margin-right: 12px;
+  font-size: 0.9em;
+  background-color: #3A4B5F;
   display:inline-block;
-  border-radius:4px;
+  border-radius:30px;
   
 }
+.pokeablt{
+  /* color:hotpink; */
+}
+
 
 /* ----- scroll to top button -----*/
 #toTop {
