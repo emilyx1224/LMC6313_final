@@ -1,13 +1,17 @@
  //initialize
+ 
  $(document).ready(function() {
     initialSetup();
   });
 //hide result if not search
   function initialSetup(){
       $('#pokeprofile').hide();
+      $('#error-msg').hide();
+      $('#letter-msg').hide();
       // $('#tv').hide();
       // $('#movie').hide();
       // $('#game').hide();
+      
   };
 //enable enter key  
   $("#search").keyup(function(event) {
@@ -20,6 +24,14 @@ function jsUcfirst(value)
 {
     return String(value).charAt(0).toUpperCase() + String(value).slice(1);
 }
+//get random pokemon
+$("#randpoke").click(function() {
+  console.log("clicked!");
+  randId = Math.floor(Math.random() * (807)) + 1;
+  console.log("randomID",randId);
+  useApi(String(randId));
+
+});
 //Scroll to top button
 $(window).on('scroll',function () {
   if($(window).scrollTop()>100) {
@@ -75,7 +87,18 @@ $("#btnGame").click(function() {
   function getpokename(){
    // $('#ready').addClass("disabled");
     var input = document.getElementById("search").value;
-    useApi(input);
+    $('#error-msg').hide();
+    $('#letter-msg').hide();
+    console.log("input",input);
+    console.log("checking letters", /^[a-zA-Z]+$/.test(input));
+    if(/^[a-zA-Z]+$/.test(input)){
+      useApi(input);
+    }
+    else {
+      console.log("not letters!");
+      $('#letter-msg').show();
+    }
+    
   }
   // scroll down to search result animation
   scrollingElement = (document.scrollingElement || document.body)
@@ -84,8 +107,6 @@ $("#btnGame").click(function() {
      scrollTop: $("#pokename").offset().top
       }, 300);
      }
-
-
   //call Pokemon Api for Pokemon stats
   function useApi(item){
     var requests = new XMLHttpRequest();
@@ -102,6 +123,9 @@ $("#btnGame").click(function() {
     var listtwo = [];
     var listType = [];
     var listAblt = [];
+     //sends request
+     requests.send();
+      
     //requests.setRequestHeader('Content-Type','application/json');
     // requests.onload = function(){
     //   if(request.status == 200){
@@ -113,9 +137,10 @@ $("#btnGame").click(function() {
       console.log("yes")
       //Check return type and content
       if(requests.readyState === 4 ){
-          //console.log("4")
+          console.log("4")
         if(requests.status === 200){
-          console.log(requests.responseText);
+          console.log("request.responseText",requests.responseText);
+         
           //parse the results
           var response = JSON.parse(requests.responseText);
           console.log("stats", response.stats);
@@ -159,17 +184,13 @@ $("#btnGame").click(function() {
           }
           // get stats
           statsarray = response.stats;
-          console.log("statsarray", statsarray);
-          console.log("statsarray0", statsarray[0].base_stat);
-          console.log("statsarray1", statsarray[1].base_stat);
-          console.log("statsarray2", statsarray[2].base_stat);
           //Append stats to a list
           for (var i=0;i<6;i++) {
             listone.push(statsarray[i].base_stat);
           }
           //Write HTML for Pokemon name
-          document.getElementById("pokename").innerHTML = jsUcfirst(item.toLowerCase());
-
+          // document.getElementById("pokename").innerHTML = jsUcfirst(item.toLowerCase());
+          document.getElementById("pokename").innerHTML = jsUcfirst(response.forms[0].name);
           //Write the HTML for types
           // document.getElementById("poketype").innerHTML = listType.join(' ');
           for (var i=0;i<typeTotal;i++){
@@ -189,7 +210,7 @@ $("#btnGame").click(function() {
 
           //write the stats data to HTML 
           console.log("stats title", jsUcfirst(item.toLowerCase()))
-          document.getElementById("pokestats").innerHTML = "Stats for "+ jsUcfirst(item.toLowerCase());
+          document.getElementById("pokestats").innerHTML = "Stats for "+ jsUcfirst(response.forms[0].name);
           // $('#pokestats').text = (jsUcfirst(item.toLowerCase()));
           // document.getElementById("pokestats").innerHTML="Here are the stats for "+jsUcfirst(item.toLowerCase());
           document.getElementById("stat1").innerHTML=statsarray[0].base_stat;
@@ -198,6 +219,9 @@ $("#btnGame").click(function() {
           document.getElementById("stat4").innerHTML=statsarray[3].base_stat;
           document.getElementById("stat5").innerHTML=statsarray[4].base_stat;
           document.getElementById("stat6").innerHTML=statsarray[5].base_stat;
+          
+          $('#pokeprofile').show();
+          scrollSmoothToBottom();
           //Write the HTML structure for displaying stats
           // $('#search-container').append("<div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'><div class='card margin'><div><img src='images/stats1.png' class='img1', alt='Speed icon'></div><h5 class='card-title text-muted'> Speed</h5><p class='card-text stats color1' id='speed1'>container[0]</p></div></div>"); 
           // $('#search-container').append("<div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'><div class='card margin'><div><img src='images/stats2.png' class='img1', alt='Special_Defense_icon'></div><h5 class='card-title text-muted'> Special Defense</h5><p class='card-text stats color2' id='speed2'>container[1]</p></div></div>"); 
@@ -226,13 +250,19 @@ $("#btnGame").click(function() {
           // console.log(statsarray[0]);
           // console.log(statsarray[0].base_stat);
         }
+        else {
+          console.log("No such result");
+          $('#error-msg').show();
+
+        }
       }
+    
     }
-     //sends request
-     requests.send();
+    
     requests.onerror=function(e){
-      console.error(requests.statusText);
+      console.error("onerror runs now",requests.statusText);
     }
+   
   //   console.log(listone);
   //   writeContent(listone);
   // }
@@ -250,7 +280,7 @@ $("#btnGame").click(function() {
 
     // document.getElementById("speed1").innerHTML=container[0];
         // $('#search-container').append('<div class="container"><div class="row"><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12><div class="card"><img src="images/pokeball.png" class="card-img-top", alt="Pokeball"> <h3 class="card-title"> <a href = "http://localhost:5000/getname/items/{{pokes}}">{{pokes}}</a> </h3><p class="card-text">Details of the pokemon:Lorem ipsum dolor sit amet consectetur adipisicing elit</p><button type="button" class="btn btn-primary">View Details</button></div></div></div></div>'); 
-        $('#pokeprofile').show();
+       
    
 
   }
