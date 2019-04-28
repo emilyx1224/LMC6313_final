@@ -743,6 +743,7 @@ border-style: none;
   font-size: 2.5em;
   margin-top:0px;
   margin-bottom: 10px;
+
 }
 .fixed-info-title {
   text-align: center;
@@ -751,6 +752,7 @@ border-style: none;
   font-variant: small-caps;
   letter-spacing: 0.02em;
   color:#9EA7B4;
+
 }
 
 /* ----- Pokémon in different media: card deck -----*/
@@ -891,4 +893,21 @@ border-style: none;
 }
 .fa-chevron-up:before {
   content: "\f077";
+}
+/* ----- Cannot find ----- */
+.s003 form .error-msg{
+  margin-top:10px;
+  font-size:0.8em;
+}
+.s003 form .error-msg p{
+  color:#FF5C5C;
+  margin-bottom:0px;
+  
+}
+#randpoke{
+  color: #fcac00;
+  /* font-size:3em; */
+  font-weight: bold;
+  vertical-align: middle;
+
 }
