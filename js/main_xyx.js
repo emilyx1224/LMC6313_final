@@ -1,5 +1,4 @@
  //initialize
- 
  $(document).ready(function() {
     initialSetup();
   });
