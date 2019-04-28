@@ -40,7 +40,7 @@
         <!-- Input search -->
         <div class="inner-form">
             <div class="input-field second-wrap">
-              <input id="search" type="text" placeholder='Try "Pikachu"' />
+              <input id="search" type="text" placeholder='Try "Pikachu","Eevee", or "Charmander"' />
             </div>  
             <div class="input-field third-wrap">
               <!-- Search button: submit to function getpokename() -->
@@ -84,7 +84,7 @@
       </form>
     </div>
      <!-- Display the pokemon profile -->
-     <div class="container">
+     <div class="container" id="pokeprofile">
        <div class="row mx-5" style="margin-top:50px;">
           <!-- Display picture -->
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -93,65 +93,67 @@
           </div>
           <!-- Display detail info -->
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <h1 id="pokename">Name</h1>
-            <h2 class="profile-title">Profile </h2>
+            <h1 id="pokename" class="pokename">Name</h1>
+            <!-- <h2 class="profile-title">Profile </h2> -->
             <div id="poketype">
               <p class= "poketype">Type1 </p>
               <p class= "poketype">Type2 </p>
             </div>
-            <p id="ab0">Ability</p>
-            <p id="ab1">Stat1</p>
-            <p id="ab2">Stat2</p>
-            <p id="ab3">Stat3</p>
-            <p id="ab4">Stat4</p>
+            <h3 class="text-muted">Ability</h3>
+            <div id="pokeablt"></div>
+            <h3 class="text-muted">Seleted Moves</h3>
+            <p id="move0">Move1</p>
+            <p id="move1">Move2</p>
+            <p id="move2">Move3</p>
+            <p id="move3">Move4</p>
+            <p id="move4">Move5</p>
           </div>
        </div>
-
        <!-- Display stats -->
        <div class="row mx-5 " >
-          <h4  id="pokemonname" class="stats-title" > Here are the stats for ___</h4>
+          <h4  id="pokestats" class="stats-title text-muted"> Here are the stats for ___?????</h4>
        </div>
        <div class="row mx-5" id="statsResult">
           <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-              <div class="card margin ">
-                  <div><img src="images/stats1.png" class="img1", alt="Speed icon"></div>
+              <div class="card stats-card">
+                  <div class="wrap"><img src="images/stats1.png" class="img1 img-center", alt="Speed icon"></div>
                   <h5 class="card-title text-muted"> Speed </h5>
-                  <p class="card-text stats color1">80</p>
+                  <p class="card-text stats color1" id="stat1">80</p>
               </div>
           </div>
           <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-              <div class="card margin">
-                  <div><img src="images/stats2.png" class="img1", alt="Special defense icon"></div>
+              <div class="card stats-card">
+                  <div class="wrap"><img src="images/stats2.png" class="img1 img-center", alt="Special defense icon"></div>
                   <h5 class="card-title text-muted"> Special defense </h5>
-                  <p class="card-text stats color2">80</p>
+                  <p class="card-text stats color2" id="stat2">80</p>
               </div>
           </div>
           <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-              <div class="card margin">
-                  <div><img src="images/stats3.png" class="img1", alt="Special attack icon"></div>
+              <div class="card stats-card">
+                  <div class="wrap"><img src="images/stats3.png" class="img1 img-center", alt="Special attack icon"></div>
                   <h5 class="card-title text-muted">Special attack </h5>
-                  <p class="card-text stats color3">80</p>
+                  <p class="card-text stats color3" id="stat3">80</p>
               </div>
           </div>
           <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-              <div class="card margin">
-                  <div><img src="images/stats4.png" class="img1", alt="Defense icon"></div>
+              <div class="card stats-card">
+                  <div class="wrap"><img src="images/stats4.png" class="img1 img-center", alt="Defense icon"></div>
                   <h5 class="card-title text-muted"> Defense</h5>
-                  <p class="card-text stats color4">80</p>
+                  <p class="card-text stats color4" id="stat4">80</p>
               </div>
           </div>
           <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-              <div class="card margin">
-                  <div><img src="images/stats5.png" class="img1", alt="Attack"></div>
+              <div class="card stats-card">
+                  <div class="wrap"><img src="images/stats5.png" class="img1 img-center", alt="Attack"></div>
                   <h5 class="card-title text-muted"> Attack</h5>
-                  <p class="card-text stats color5">80</p>
+                  <p class="card-text stats color5" id="stat5">80</p>
               </div>
           </div>
           <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-              <div class="card margin">
-                  <div><img src="images/stats6.png" class="img1", alt="Hp icon"></div>
+              <div class="card stats-card">
+                  <div class="wrap"><img src="images/stats6.png" class="img1 img-center", alt="Hp icon"></div>
                   <h5 class="card-title text-muted"> Hp </h5>
-                  <p class="card-text stats color6">80</p>
+                  <p class="card-text stats color6" id="stat6">80</p>
               </div>
           </div>
        </div>
@@ -159,7 +161,7 @@
 
   <!-- Fixed information  -->
   <div class="container fixed-info-title">
-        <h2 style="display:inline-block;font-size:2em;" class="font-weight-bold">more about pokémon</h2>
+        <h2 style="display:inline-block;font-size:2em;" class="font-weight-bold text-muted">more about pokémon</h2>
   </div> 
   
    <div class="container fixed-info" id="tv">
@@ -205,6 +207,7 @@
           
         </div>
    </div>
+   
    <div class="container fixed-info" id="game">
       <div class="row mx-5">
           <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
