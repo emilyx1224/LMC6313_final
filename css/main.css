@@ -634,12 +634,12 @@ legend {
 }
 /* set style for result title*/
 
-.result_title{
-  font-size:3em;
-  font-weight: 500;
+.stats-title{
   text-align: center;
-  color:#535353;
-  padding: 5% 0 2% 0;
+  margin-bottom: 0px;
+  margin:10px auto 20px auto;
+  color:#9EA7B4;
+  
 }
 /*for parallax scrolling effect in the search area*/
 .parallax { 
@@ -704,7 +704,8 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
 
  /* ----- fixed information display ----- */
  .wrap {
-  background: rgba(255,255,255,0);
+  /* background: rgba(255,255,255,0); */
+  background-color:#F2F2F2;
   /* border: solid 1px red; */
   /* width: 384px; /* Play with this value */
   /* height: 216px;  Play with this value */ 
@@ -840,6 +841,24 @@ box-shadow: 0px 5px 15px rgba(180,180, 190, 0.5);
   font-weight: 200;
   font-size: 1.5em;
 }
+#pokename {
+  font-weight: 800;
+  font-size:2.5em;
+}
+/* #poketype {
+  border: 1px solid darkred;
+  display:inline-block;
+
+} */
+.poketype {
+  border: 1px solid lightgray;
+  margin: 5px;
+  padding: 5px 15px;
+  display:inline-block;
+  border-radius:4px;
+  
+}
+
 /* ----- scroll to top button -----*/
 #toTop {
   text-align: center;
