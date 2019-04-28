@@ -83,153 +83,152 @@
         </div>
       </form>
     </div>
+     <!-- Display the pokemon profile -->
+     <div class="container">
+       <div class="row mx-5" style="margin-top:50px;">
+          <!-- Display picture -->
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="wrap"><img src="images/sample_poke_profile.png" id="aloha" width="100%"> 
+            </div>
+          </div>
+          <!-- Display detail info -->
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h1 id="pokename">Name</h1>
+            <h2 class="profile-title">Profile </h2>
+            <div id="poketype">
+              <p class= "poketype">Type1 </p>
+              <p class= "poketype">Type2 </p>
+            </div>
+            <p id="ab0">Ability</p>
+            <p id="ab1">Stat1</p>
+            <p id="ab2">Stat2</p>
+            <p id="ab3">Stat3</p>
+            <p id="ab4">Stat4</p>
+          </div>
+       </div>
 
-    <div class="container fixed-info-title">
-        
-          <h2 style="display:inline-block;font-size:2em;" class="font-weight-bold">more about pokémon</h2>
+       <!-- Display stats -->
+       <div class="row mx-5 " >
+          <h4  id="pokemonname" class="stats-title" > Here are the stats for ___</h4>
+       </div>
+       <div class="row mx-5" id="statsResult">
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+              <div class="card margin ">
+                  <div><img src="images/stats1.png" class="img1", alt="Speed icon"></div>
+                  <h5 class="card-title text-muted"> Speed </h5>
+                  <p class="card-text stats color1">80</p>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+              <div class="card margin">
+                  <div><img src="images/stats2.png" class="img1", alt="Special defense icon"></div>
+                  <h5 class="card-title text-muted"> Special defense </h5>
+                  <p class="card-text stats color2">80</p>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+              <div class="card margin">
+                  <div><img src="images/stats3.png" class="img1", alt="Special attack icon"></div>
+                  <h5 class="card-title text-muted">Special attack </h5>
+                  <p class="card-text stats color3">80</p>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+              <div class="card margin">
+                  <div><img src="images/stats4.png" class="img1", alt="Defense icon"></div>
+                  <h5 class="card-title text-muted"> Defense</h5>
+                  <p class="card-text stats color4">80</p>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+              <div class="card margin">
+                  <div><img src="images/stats5.png" class="img1", alt="Attack"></div>
+                  <h5 class="card-title text-muted"> Attack</h5>
+                  <p class="card-text stats color5">80</p>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+              <div class="card margin">
+                  <div><img src="images/stats6.png" class="img1", alt="Hp icon"></div>
+                  <h5 class="card-title text-muted"> Hp </h5>
+                  <p class="card-text stats color6">80</p>
+              </div>
+          </div>
+       </div>
+     </div>
+
+  <!-- Fixed information  -->
+  <div class="container fixed-info-title">
+        <h2 style="display:inline-block;font-size:2em;" class="font-weight-bold">more about pokémon</h2>
+  </div> 
   
-    </div> 
-    
-     <div class="container fixed-info" id="tv">
-        <div class="row mx-5">
+   <div class="container fixed-info" id="tv">
+      <div class="row mx-5">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <iframe  width="700" height=auto src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
+                </iframe>
+            </div> -->
+            <video class="wrap" width="100%" height=auto poster="images/thumbnail_tv.jpg" controls>
+                <source src="videos/pokemon_tv.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <h1 style="color:#EFB200;font-weight:bold;"> TV Show</h1>
+            <hr class="my-3">
+            <p>Pokémon the Series is an ongoing Japanese anime television series, which premiered in Japan on April 1, 1997 on TV Tokyo. As of 2018 it has produced and aired over 1,000 episodes, divided into 6 series in Japan and 22 seasons internationally. The anime follows the quest of the main character, Ash Ketchum (known as Satoshi in Japan), a Pokémon Master in training, as he and a small group of friends travel around the world of Pokémon along with their Pokémon partners.</p>
+            <a  class="btn btn-warning text-white" href="https://www.pokemon.com/us/pokemon-episodes/01_01-pokemon-i-choose-you/?play=true" role="button" target="_blank">Watch Pokémon TV</a>
+        </div>
+      </div>
+   </div>
+   <div class="container fixed-info" id="movie">
+      <div class="row mx-5">
           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <iframe  width="700" height=auto src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
-                  </iframe>
-              </div> -->
-              <video class="wrap" width="100%" height=auto poster="images/thumbnail_tv.jpg" controls>
-                  <source src="videos/pokemon_tv.mp4" type="video/mp4">
+              <h1 style="color:#4CD964;font-weight:bold;"> Pokémon Movies</h1>
+              <hr class="my-3">
+              <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
+              <a  class="btn btn-success text-white" href="https://www.detectivepikachumovie.com/" role="button" target="_blank">Most recent movie: Detective Pikachu</a>
+
+              
+            </div>
+          <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
+              </iframe>
+          </div> -->
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <video class="wrap" width="100%" height=auto poster="images/thumbnail_movie.png" controls>
+                  <source src="videos/pikachu_trailer.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
           </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <h1 style="color:#EFB200;font-weight:bold;"> TV Show</h1>
-              <hr class="my-3">
-              <p>Pokémon the Series is an ongoing Japanese anime television series, which premiered in Japan on April 1, 1997 on TV Tokyo. As of 2018 it has produced and aired over 1,000 episodes, divided into 6 series in Japan and 22 seasons internationally. The anime follows the quest of the main character, Ash Ketchum (known as Satoshi in Japan), a Pokémon Master in training, as he and a small group of friends travel around the world of Pokémon along with their Pokémon partners.</p>
-              <a  class="btn btn-warning text-white" href="https://www.pokemon.com/us/pokemon-episodes/01_01-pokemon-i-choose-you/?play=true" role="button" target="_blank">Watch Pokémon TV</a>
-          </div>
-        </div>
-     </div>
-     <div class="container fixed-info" id="movie">
-        <div class="row mx-5">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h1 style="color:#4CD964;font-weight:bold;"> Pokémon Movies</h1>
-                <hr class="my-3">
-                <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
-                <a  class="btn btn-success text-white" href="https://www.detectivepikachumovie.com/" role="button" target="_blank">Most recent movie: Detective Pikachu</a>
-
-                
-              </div>
-            <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
-                </iframe>
-            </div> -->
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <video class="wrap" width="100%" height=auto poster="images/thumbnail_movie.png" controls>
-                    <source src="videos/pikachu_trailer.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                  </video>
-            </div>
-          </div>
-     </div>
-     
-     <div class="container fixed-info" id="game">
-        <div class="row mx-5">
-            <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
-                </iframe>
-            </div> -->
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <div  class="wrap"><img src="images/pokemon_game_nintendo2.jpg" width=100% alt="" ></div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-              <h1 style="color:#1BABED;font-weight:bold;"> Pokémon Video Games</h1>
-              <hr class="my-3">
-              <p>Pokémon has a series of video games published by Nintendo and The Pokémon Company as part of the Pokémon media franchise. First released in 1996 in Japan for the Game Boy, the main series of role-playing video games (RPGs) has continued on each generation of Nintendo's handhelds. Also, a big number of spin-off games based on the series have been developed by various companies, encompassing other genres such as action role-playing, puzzle, fighting, and digital pet games.</p>
-              <a  class="btn btn-primary text-white" href="https://www.pokemongo.com/en-us/" role="button" target="_blank">Play Pokémon Go on Your Phone</a>
-            </div>
-          </div>
-     </div>
-     <!-- Display the pokemon profile -->
-     <div class="container">
-       <div class="row mx-5">
-        <!-- for picture -->
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <img src="images/sample_poke_profile.png" class="wrap" > 
           
         </div>
-        <!-- for profile -->
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <h1>Squirtle</h1>
-          <h2 class="profile-title">Profile </h2>
-          <p>Type</p> 
-          <p>Ability</p>
-          <p>Stat1</p>
-          <p>Stat2</p>
-          <p>Stat3</p>
-          <p>Stat4</p>
-          <p>Stat5</p>
-          <p>Stat6</p>
+   </div>
+   
+   <div class="container fixed-info" id="game">
+      <div class="row mx-5">
+          <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
+              </iframe>
+          </div> -->
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div  class="wrap"><img src="images/pokemon_game_nintendo2.jpg" width=100% alt="" ></div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <h1 style="color:#1BABED;font-weight:bold;"> Pokémon Video Games</h1>
+            <hr class="my-3">
+            <p>Pokémon has a series of video games published by Nintendo and The Pokémon Company as part of the Pokémon media franchise. First released in 1996 in Japan for the Game Boy, the main series of role-playing video games (RPGs) has continued on each generation of Nintendo's handhelds. Also, a big number of spin-off games based on the series have been developed by various companies, encompassing other genres such as action role-playing, puzzle, fighting, and digital pet games.</p>
+            <a  class="btn btn-primary text-white" href="https://www.pokemongo.com/en-us/" role="button" target="_blank">Play Pokémon Go on Your Phone</a>
+          </div>
         </div>
-       </div>
-     </div>
-    <!-- Display search results: pokemon stats:
-      speed, special defense, special attack, defense, attack, hp --> 
-    <div id="para3" class="container">
-        <h4 class="result_title" id="pokemonname"> Here are the stats for ___</h4>
-        <div id="search-container" class="row">
-          <!-- see main.jsfile for this part -->
-
-           <!-- <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div class="card margin ">
-                    <div><img src="images/stats1.png" class="img1", alt="Speed icon"></div>
-                    <h5 class="card-title text-muted"> Speed </h5>
-                    <p class="card-text stats color1">80</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div class="card margin">
-                    <div><img src="images/stats2.png" class="img1", alt="Special defense icon"></div>
-                    <h5 class="card-title text-muted"> Special defense </h5>
-                    <p class="card-text stats color2">80</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div class="card margin">
-                    <div><img src="images/stats3.png" class="img1", alt="Special attack icon"></div>
-                    <h5 class="card-title text-muted">Special attack </h5>
-                    <p class="card-text stats color3">80</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div class="card margin">
-                    <div><img src="images/stats4.png" class="img1", alt="Defense icon"></div>
-                    <h5 class="card-title text-muted"> Defense</h5>
-                    <p class="card-text stats color4">80</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div class="card margin">
-                    <div><img src="images/stats5.png" class="img1", alt="Attack"></div>
-                    <h5 class="card-title text-muted"> Attack</h5>
-                    <p class="card-text stats color5">80</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
-                <div class="card margin">
-                    <div><img src="images/stats6.png" class="img1", alt="Hp icon"></div>
-                    <h5 class="card-title text-muted"> Hp </h5>
-                    <p class="card-text stats color6">80</p>
-                </div>
-            </div> -->
-            
-        </div>
-    </div>
-    <!-- start scrollUp  -->
+   </div>
+    <!-- button for scroll up to top  -->
     <div id="toTop" style="display:block;">
         <i class="fas fa-chevron-up">
         </i>
     </div>
-    <script src="js/main.js"> </script>
+    <!-- <script src="js/main.js"> </script> -->
+    <script src="js/main_xyx.js"> </script>
   </body>
 </html>
