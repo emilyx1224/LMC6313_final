@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
     <meta name="Yangxin&Zhong" content="LMC6313-Final">
     <link rel="shortcut icon" href="pikachu.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -40,14 +41,19 @@
         <div class="inner-form">
             <div class="input-field second-wrap">
               <input id="search" type="text" placeholder='Try "Pikachu","Eevee", or "Charmander"' />
+             
             </div>  
+            <button type="button" class="btn btn-link" id="randpoke">Get Random Pokémon</button>
             <div class="input-field third-wrap">
+                
               <!-- Search button: submit to function getpokename() -->
-              <button class="btn-search" id="ready" type="button" onclick="getpokename();scrollSmoothToBottom();">
+              <!-- <button type="button" class="btn-search" id="randpoke">Get Random Pokémon</button> -->
+              <button class="btn-search" id="ready" type="button" onclick="getpokename();">
                 <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
                 </svg>
               </button>
+            
             </div>
         </div>
         <!-- <div class="btn-group">
@@ -56,7 +62,13 @@
           <button type="button" class="btn btn-link">button3</button>
           
         </div> -->
-        <div class="container">
+        <div class="container error-msg" id="error-msg" >
+           <p >Oops, we can't find the Pokémon you were looking for. Try again. </p>
+        </div>
+        <div class="container error-msg" id="letter-msg">
+            <p >Oops, please enter letters only. </p>
+         </div>
+        <div class="container" style="margin-top:0px;">
           <div class = "row">
             <p class = "intro-text">Pokémon are cute creatures. They are raised and commanded by their trainiers.  They can grow and even evolve into stronger Pokémon. There are currently more than 700 creatures that inhabit the Pokémon universe.</p>
           </div>
@@ -191,6 +203,7 @@
               <p>As of January 2019, 22 animated Pokémon films have been directed by Kunihiko Yuyama and Tetsuo Yajima, and distributed in Japan by Toho since 1998. A live-action Pokémon film directed by Rob Letterman began filming in January 2018. On August 24, the film's official title was announced as Pokémon: Detective Pikachu. It is set for release on May 10, 2019.</p>
               <a  class="btn btn-success text-white" href="https://www.detectivepikachumovie.com/" role="button" target="_blank">Most recent movie: Detective Pikachu</a>
 
+              
             </div>
           <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <iframe class="wrap" width=100% height=100% src=" https://www.youtube.com/embed/rg6CiPI6h2g" frameborder="0" allowfullscreen>
@@ -226,7 +239,7 @@
     <!-- button for scroll up to top  -->
     <div id="toTop" style="display:block;">
         <i class="fas fa-chevron-up">
-        </i> 
+        </i>
     </div>
     <!-- <script src="js/main.js"> </script> -->
     <script src="js/main_xyx.js"> </script>
