@@ -8,10 +8,7 @@
       $('#pokeprofile').hide();
       $('#error-msg').hide();
       $('#letter-msg').hide();
-      // $('#tv').hide();
-      // $('#movie').hide();
-      // $('#game').hide();
-      
+     
   };
 //enable enter key  
   $("#search").keyup(function(event) {
