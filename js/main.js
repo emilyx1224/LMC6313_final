@@ -11,6 +11,7 @@
       // $('#tv').hide();
       // $('#movie').hide();
       // $('#game').hide();
+      
   };
 //enable enter key  
   $("#search").keyup(function(event) {
@@ -247,6 +248,8 @@ $("#btnGame").click(function() {
           // $('#search-container').append("<div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'><div class='card margin'><div><img src='images/stats5.png' class='img1', alt='Attack_icon'></div><h5 class='card-title text-muted'> Attack</h5><p class='card-text stats color5' id='speed5'>container[4]</p></div></div>"); 
           // $('#search-container').append("<div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'><div class='card margin'><div><img src='images/stats6.png' class='img1', alt='Hp_icon'></div><h5 class='card-title text-muted'> Hp</h5><p class='card-text stats color6' id='speed6'>container[5]</p></div></div>"); 
               // $('#search-container').append("<div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'><div class='card'><img src='images/shield.png' class='card-img-top', alt='Pokeball' ><h3 class='card-title'> Speed</h3><p class='card-text' id='speed2'>container[1]</p></div></div>"); 
+
+
 
               // $('#search-container').append("<div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'><div class='card'><img src='images/shield.png' class='card-img-top', alt='Pokeball'><h3 class='card-title'> Speed</h3><p class='card-text' id='speed3'>Details of this attribute</p></div></div>"); 
 
