@@ -9,7 +9,6 @@
       $('#error-msg').hide();
       $('#letter-msg').hide();
     
-      
   };
 //enable enter key  
   $("#search").keyup(function(event) {
